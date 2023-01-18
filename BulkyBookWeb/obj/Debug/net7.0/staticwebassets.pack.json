@@ -33,6 +33,14 @@
       "PackagePath": "staticwebassets\\images\\products\\a06606ce-f5e9-4d79-9814-de71a1186939.jpeg"
     },
     {
+      "Id": "D:\\2023\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\e272283f-67cb-4ea0-9f78-105885f4dedf.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\e272283f-67cb-4ea0-9f78-105885f4dedf.jpg"
+    },
+    {
+      "Id": "D:\\2023\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\Company.js",
+      "PackagePath": "staticwebassets\\js\\Company.js"
+    },
+    {
       "Id": "D:\\2023\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
     },
