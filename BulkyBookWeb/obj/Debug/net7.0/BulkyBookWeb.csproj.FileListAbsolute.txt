@@ -582,3 +582,4 @@ D:\2023\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI
 D:\2023\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\2023\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\BulkyBook.Utility.dll
 D:\2023\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\BulkyBook.Utility.pdb
+D:\2023\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\Stripe.net.dll
