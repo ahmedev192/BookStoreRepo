@@ -2,6 +2,8 @@
 using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using BulkyBook.Models.ViewModels;
+using BulkyBook.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +15,10 @@ using System.Linq;
 
 namespace BulkyBookWeb.Controllers;
 [Area("Admin")]
+[Authorize(Roles = SD.Role_Admin)]
 public class CompanyController : Controller
 {
     private readonly IUnitOfWork _unitOfWork;
-
 
     public CompanyController(IUnitOfWork unitOfWork)
     {
@@ -33,43 +35,38 @@ public class CompanyController : Controller
     {
         Company company = new();
 
-
         if (id == null || id == 0)
         {
-            //create product
-            //ViewBag.CategoryList = CategoryList;
-            //ViewData["CoverTypeList"] = CoverTypeList;
             return View(company);
         }
         else
         {
             company = _unitOfWork.Company.GetFirstOrDefault(u => u.Id == id);
             return View(company);
-
-            //update product
         }
-
-
     }
 
     //POST
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Upsert(Company obj)
+    public IActionResult Upsert(Company obj, IFormFile? file)
     {
 
         if (ModelState.IsValid)
         {
+            
             if (obj.Id == 0)
             {
                 _unitOfWork.Company.Add(obj);
+                TempData["success"] = "Company created successfully";
             }
             else
             {
                 _unitOfWork.Company.Update(obj);
+                TempData["success"] = "Company updated successfully";
             }
             _unitOfWork.Save();
-            TempData["success"] = "Company created successfully";
+            
             return RedirectToAction("Index");
         }
         return View(obj);
@@ -81,8 +78,8 @@ public class CompanyController : Controller
     [HttpGet]
     public IActionResult GetAll()
     {
-        var CompanyList = _unitOfWork.Company.GetAll();
-        return Json(new { data = CompanyList });
+        var companyList = _unitOfWork.Company.GetAll();
+        return Json(new { data = companyList });
     }
 
     //POST
@@ -94,8 +91,6 @@ public class CompanyController : Controller
         {
             return Json(new { success = false, message = "Error while deleting" });
         }
-
- 
 
         _unitOfWork.Company.Remove(obj);
         _unitOfWork.Save();
