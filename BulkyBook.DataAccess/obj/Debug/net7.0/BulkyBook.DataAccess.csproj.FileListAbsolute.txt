@@ -49,3 +49,5 @@ C:\Users\ahmed\OneDrive\Desktop\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\
 C:\Users\ahmed\OneDrive\Desktop\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.pdb
 C:\Users\ahmed\OneDrive\Desktop\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.genruntimeconfig.cache
 C:\Users\ahmed\OneDrive\Desktop\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\ref\BulkyBook.DataAccess.dll
+D:\2023\BulkyBook\BulkyBook.DataAccess\bin\Debug\net7.0\BulkyBook.Utility.dll
+D:\2023\BulkyBook\BulkyBook.DataAccess\bin\Debug\net7.0\BulkyBook.Utility.pdb
